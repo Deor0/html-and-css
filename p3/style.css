@@ -60,8 +60,8 @@ body {
   border-bottom: none;
 }
 
-.cell::after,
-.cell::before {
+.cell.x::after,
+.cell.x::before {
   background-color: #6dd6da;
 }
 
@@ -93,6 +93,11 @@ body {
 .board.o .cell:not(.x):not(.o):hover::after,
 .board.o .cell:not(.x):not(.o):hover::before {
   background-color: #a2abb5;
+}
+
+.cell.o::after,
+.cell.o::before {
+  background-color: #6b8199;
 }
 
 .cell.o::before,
