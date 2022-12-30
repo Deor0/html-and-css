@@ -27,7 +27,7 @@ body {
 .cell {
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid #000;
+  border: 1px solid #817f82;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,12 +62,12 @@ body {
 
 .cell::after,
 .cell::before {
-  background-color: #000;
+  background-color: #6dd6da;
 }
 
 .board.x .cell:not(.x):not(.o):hover::before,
 .board.x .cell:not(.x):not(.o):hover::after {
-  background-color: #c3c3c3;
+  background-color: #c8eeef;
 }
 
 .cell.x::before,
@@ -92,7 +92,7 @@ body {
 
 .board.o .cell:not(.x):not(.o):hover::after,
 .board.o .cell:not(.x):not(.o):hover::before {
-  background-color: #c3c3c3;
+  background-color: #a2abb5;
 }
 
 .cell.o::before,
