@@ -1,4 +1,3 @@
-
 setInterval(setClock, 1000)
 
 const minuteHand = document.querySelector('[data-minute]')
