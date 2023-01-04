@@ -26,6 +26,7 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
   position: relative;
+  box-shadow: 0 0 0 2px black, 0 0 0 30px #c3c3c3;
 }
 
 .clock::after {
@@ -100,7 +101,7 @@ body {
 }
 
 .second {
-  --rotation: 10;
+  --rotation: 0;
   height: 40%;
   width: 2px;
   background-color: red;
@@ -108,15 +109,52 @@ body {
 }
 
 .minute {
-  --rotation: 50;
+  --rotation: 0;
   height: 35%;
   width: 10px;
   background-color: black;
 }
 
 .hour {
-  --rotation: 30;
+  --rotation: 0;
   background-color: #c3c3c3;
   width: 10px;
   height: 20%;
+}
+
+.pendulum {
+  background-color: #444;
+  width: 30px;
+  height: 180px;
+  position: absolute;
+  top: calc(50% + 180px);
+  left: 48%;
+  transform: translateX(-50%);
+  transform-origin: top;
+  animation: pendulum 5s infinite;
+  z-index: -100;
+}
+
+.pendulum::after {
+  content: "";
+  background-color: grey;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pendulum {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
 }
