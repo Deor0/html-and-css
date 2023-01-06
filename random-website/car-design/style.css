@@ -139,7 +139,7 @@ li > p {
   color: #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 740px) {
   nav .focus {
     display: none;
   }
